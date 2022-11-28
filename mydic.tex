@@ -3,8 +3,11 @@
 \usepackage[top=3.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm,columnsep=30pt]{geometry} % Document margins and spacings
 \usepackage{microtype} % 优化字间距
 \usepackage{multicol} % 分栏环境
-\usepackage{xifthen} % provides \isempty test
-\newcommand{\entry}[4]{\ifthenelse{\isempty{#1}}{}{\textbf{#1}\ \kaishu(#2)\ \textit{#3}\ $\bullet$\ }{#4}\vspace{3pt}}
+\usepackage{xifthen} % 提供 \isempty 测试
+\usepackage{amssymb}
+
+% 若单词栏未写，则当做句子看待
+\newcommand{\entry}[4]{\ifthenelse{\isempty{#1}}{$\vartriangleright$ }{\textbf{#1}\ \kaishu(#2)\ \textit{#3}\ $\bullet$\ }{#4}\vspace{3pt}}
 \usepackage[hidelinks]{hyperref} % 目录超链接
 
 \usepackage{fancyhdr}
