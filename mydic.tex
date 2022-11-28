@@ -7,7 +7,7 @@
 \usepackage{amssymb}
 
 % 若单词栏未写，则当做句子看待
-\newcommand{\entry}[4]{\ifthenelse{\isempty{#1}}{$\vartriangleright$ }{\textbf{#1}\ {\kaishu(#2)}\ \textit{#3}\ $\bullet$\ }{#4}\vspace{3pt}}
+\newcommand{\entry}[4]{\ifthenelse{\isempty{#1}}{$\vartriangleright$ }{\textbf{#1}\ {\kaishu(#2)}\ \textit{#3}\ $\bullet$\ }{#4}}
 \usepackage[hidelinks]{hyperref} % 目录超链接
 
 \usepackage{fancyhdr}
@@ -22,6 +22,7 @@
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 \setlength{\headheight}{13.6pt}
+\setlength{\parskip}{6pt} % 段间距
 
 \usepackage{color}
 \definecolor{titleblue}{RGB}{12,36,97}
